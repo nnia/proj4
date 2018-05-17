@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+
+<html>
+    <head>
+        <title>Система тестирования</title>
+    </head>
+    <body>
+        <h1>Hi there 4!</h1>
+        
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+<br>
+
+{% for item in person %}
+        {{item.surname}}
+        {{item.name}}
+        {{item.age}}
+        {{item.result}}
+        <br>
+{% endfor %}
+
+<h1>{{person.title}}</h1>
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+<div class = "footer">
+ Дата и время загрузки страницы: {% now "N j, Y, P" %} <br>
+ Сделала <a href="//vk.com/anna_egorova"></a>Анна Егорова
+</div>
+
+         <a title="Home page" href="index.html">Домой (на главную)</a>
+    </body>
+</html>

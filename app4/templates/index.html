@@ -1,0 +1,60 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+<!--<link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">  -->
+
+<!DOCTYPE html>
+<h1>Главная</h1>
+
+{% if message %}
+    <p><strong>{{ message }}</strong></p>
+{% endif %}
+
+{% if latest_riddles %}
+
+    <ul>
+        {% for riddle in latest_riddles %}
+            <li>
+                <a href="/riddles/{{ riddle.id }}/">
+                    {{ riddle.riddle_text }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+
+    <div class = "header" role = "navigation">
+    <a title="Пока пусто" href="coding.html">Программирование</a> <br>
+    <a title="Пока пусто" href="testbase.html">Система тестирования</a> <br>    
+    <a title="Разное" href="enfant.html">Детская площадка</a> <br>
+    <a title="Просто так" href="answer.html">Упражнения</a> <br>
+    <a title="Главная (Home page)" href="index.html">Домой (на главную)</a> <br>
+    </div>
+
+<body>  
+    <h1>Заголовок H1</h1> 
+    <article> <!-- начало первой статьи -->
+        <h2>Заголовок H2</h2> 
+        <p>Текст абзаца...</p>
+    </article><!-- конец первой статьи -->
+    <article> <!-- начало второй статьи -->
+        <h2>Заголовок H2</h2> 
+        <p>Текст абзаца...</p>
+    </article> <!-- конец второй статьи -->
+    <footer>сведения об авторских правах, навигация по сайту, счетчики... <!-- "подвал" сайта -->
+        <address>Контактные данные автора сайта</address>
+    </footer>
+</body>
+
+
+
+<div class = "footer">
+ Дата и время загрузки страницы: {% now "N j, Y, P" %} <br>
+ Сделала <a href="//vk.com/anna_egorova"></a>Анна Егорова
+</div>
+
+ </html>
+{% endif %}

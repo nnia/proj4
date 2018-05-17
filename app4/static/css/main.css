@@ -1,0 +1,50 @@
+
+body {
+  background: FloralWhite; /* #b6b7bc, !!! áûëî #4B6C9E */
+  font-size: .80em;
+  font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+  margin: 0px;
+  padding: 10px;
+  color: #696969;
+}
+h1 {
+  color: Maroon; /* Цвет заголовка */
+  font-size: 24pt; /* Размер шрифта в пунктах */
+  font-family: Georgia, Times, serif; /* Семейство шрифтов */
+  font-weight: normal; /* Нормальное начертание текста  */
+  margin: 20px;
+}
+h2 {
+  color: RosyBrown; /* Цвет заголовка */
+  font-size: 18pt; /* Размер шрифта в пунктах */
+  font-family: Georgia, Times, serif; /* Семейство шрифтов */
+  font-weight: normal; /* Нормальное начертание текста  */
+  margin: 20px;
+}
+p {
+  color: Purple; 
+  text-align: justify; /* Выравнивание по ширине */
+  margin-left: 0px; /* Отступ слева в пикселах */
+  margin-right: 0px; /* Отступ справа в пикселах */
+  border-left: 1px solid #999; /* Параметры линии слева */
+  border-bottom: 1px solid #999; /* Параметры линии снизу */
+  padding-left: 10px; /* Отступ от линии слева до текста  */
+  padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+}
+
+.header {
+  background: NavajoWhite;
+  font-size: 12pt;
+  font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+  margin: 0px;
+  padding: 10px;
+  color: #696969;
+}
+
+.footer {
+background: PapayaWhip;
+margin: 20px auto 0; 
+color: Maroon; 
+/* position: relative; */
+height: 50px;
+}

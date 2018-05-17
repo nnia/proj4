@@ -1,0 +1,29 @@
+<html>
+<head>
+     
+    <title>Django</title>
+</head>
+<body>
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+                <li style="color: red;">{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+     
+    <form action="" method="post">
+        <label>Имя</label> 
+        <input name="name" value="{{ form.name }}" type="text">
+ 
+        <label>Е-mail</label> 
+        <input name="email" value="{{ form.email }}" type="text">
+         
+        <label>Сообщение</label>
+        <textarea name="message">{{ form.message }}</textarea>
+         
+        <input value="Отправить" type="submit">
+        {% csrf_token %}
+    </form>
+</body>
+</html>
