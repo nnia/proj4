@@ -24,11 +24,20 @@ def index(request):
 def hello(request):     
 	return HttpResponse("Hello world 4!")
 
-def current_datetime(request):
-	now = datetime.datetime.now()
-	html = "<html><body>It is now %s.</body></html>" % now
-	return HttpResponse(html)
 
+def hello_world(request):
+    return HttpResponse("Hello, World")
+
+def header(request):
+	txt = "<h1>Заголовок H1</h1>" 
+	#return HttpResponse(request, {"txt":txt})
+	return HttpResponse(txt)
+
+def current_datetime(request):
+	now1 = datetime.datetime.now()
+	#html = "<html><body>It is now %s.</body></html>" % now
+	return now1
+	#return render(request, {"header": header(request)})
 
 #-----------------------------------------------------
 # My pages with separate URLs
@@ -64,19 +73,20 @@ def answer(request):
 	#print(Person.objects.filter(age='11').values)
 	#print(person.get(age="11"))
 	#for (item in person)
-	
 
+	current_datetime(request)
 	print("---------------")
-	return render(request, "answer.html", {"person": person})	
+	return render(request, "answer.html", {
+		"person": person, 
+		"current_datetime": current_datetime(request),
+		"header": header(request)  })	
 	#return render(request, "answer.html")	
 
 	#template = loader.get_template('answer/answer.html')
 	#return HttpResponse(template.render(request))
     
 
-def header(request):
-	print("((((((((((((((((((((((((((((((((((((((((((((")
-	return render(request)
+
 
 
 

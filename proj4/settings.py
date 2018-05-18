@@ -81,8 +81,8 @@ DATABASES = {
 #    },
 
    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'ENGINE': 'django.db.backends.postgresql',
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'testbase4',        
         'USER': 'postgres',
         'PASSWORD': '123',

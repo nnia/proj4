@@ -1,16 +1,18 @@
-{% load staticfiles %}
-<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+{% extends 'base.html'%}
 
-<html>
-    <head>
-        <title>Упражнения</title>
-    </head>
-    <body>
-        <h1>Hi there 4!</h1>
-        <p>answer.html is displayed 4!</p>
+{% block content %}
+    <h1>Упражнения</h1> 
 
-{{header}}        
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+<br>
+{{header}}
+<br>        
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+<br>
+{{current_datetime}}
+<br>
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 <br>
@@ -25,16 +27,12 @@
     </p>
 {% endfor %}
 
-<h1>{{person.title}}</h1>
+{% endblock %}
+
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-<div class = "footer">
- Дата и время загрузки страницы: {% now "N j, Y, P" %} <br>
- Сделала <a href="//vk.com/anna_egorova"></a>Анна Егорова
-</div>
 
-     <a title="Home page" href="index.html">Домой (на главную)</a>
 
     </body>
 </html>

@@ -1,20 +1,9 @@
-{% load staticfiles %}
-<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+{% extends 'base.html'%}
 
-<html>
-    <head>
-        <title>Детская площадка</title>
-    </head>
-    <body>
-        <h1>Hi there 4!</h1>
-        <p>enfant.html is displayed 4!</p>
-
-<div class = "footer">
- Дата и время загрузки страницы: {% now "N j, Y, P" %} <br>
- Сделала <a href="//vk.com/anna_egorova"></a>Анна Егорова
-</div>
-
-
-         <a title="Home page" href="index.html">Домой (на главную)</a>
-    </body>
-</html>
+{% block content %}
+    <h1>Детская площадка</h1> 
+        <h2>Проект заголовка H2</h2> 
+        <p>Текст абзаца...</p>
+        <h2>Проект заголовка H2</h2> 
+        <p>Текст абзаца...</p>
+{% endblock %}
