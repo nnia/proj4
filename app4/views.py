@@ -8,6 +8,9 @@ from django.http import HttpResponse
 from app4.models import Person
 
 import datetime
+import os
+
+
 
 #def index(request):
 #    return HttpResponse("Hello, world1. ")
@@ -17,6 +20,7 @@ def indef(request):
     return HttpResponse("Hello World1!")
 
 def index(request):
+	#print os.path.abspath(__file__)
     return render(request, "index.html")
 
 #-----------------------------------------------------
@@ -53,6 +57,12 @@ def testbase(request):
 	return render(request, "testbase.html", {"person": person})
 
 def enfant(request):
+	#print os.path.dirname(__file__)
+	#print os.path.abspath(os.path.join(__file__,"../.."))
+	BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+	print BASE_DIR #os.path.join(BASE_DIR, '../db.sqlite3')
+
 	return render(request, "enfant.html")
 
 def answer(request):
