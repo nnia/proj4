@@ -20,3 +20,28 @@ class Person(models.Model):
 		self.age,
 		self.result,
 	])
+
+class QuestionSet(models.Model):
+	id = models.IntegerField(primary_key=True)
+	question = models.CharField(max_length=127)
+	nAnswers = models.IntegerField(default=3)
+	answer1 = models.CharField(max_length=127)
+	answer2 = models.CharField(max_length=127)
+	answer3 = models.CharField(max_length=127)
+	rightAnswer = models.IntegerField(default=1)
+	ageMin = models.IntegerField(default=0)
+	ageMax = models.IntegerField(default=100)
+	choice = models.IntegerField(default=100)
+	def __str__(self):
+		return ' '.join([
+		self.id,
+		self.question,
+		self.nAnswers,
+		self.answer1,
+		self.answer2,
+		self.answer3,
+		self.rightAnswer,
+		self.ageMin,		
+		self.ageMax,
+		self.choice,
+	])

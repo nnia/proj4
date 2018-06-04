@@ -6,6 +6,8 @@ from django.shortcuts import render, loader
 # Create your views here.
 from django.http import HttpResponse
 from app4.models import Person
+from app4.models import QuestionSet
+
 
 import datetime
 import os
@@ -54,7 +56,10 @@ def coding(request):
 
 def testbase(request):
 	person = Person.objects.all()
-	return render(request, "testbase.html", {"person": person})
+	questionSet = QuestionSet.object.all()
+	return render(request, "testbase.html", 
+		{"person": person, 
+		"questionSet" : questionSet})
 
 def enfant(request):
 	#print os.path.dirname(__file__)
@@ -73,6 +78,9 @@ def answer(request):
 	#Person.surname = "surname1"	
 	#person = Person.objects.all()
 	person = Person.objects.all()
+
+#	newp = Person(surname = 'Petrov', name = 'Petr', age = 3, result = 45)
+#	newp.save()
 	
 	#print(e.age for e in person)
 	p = Person.objects.values_list('id', 'surname')
