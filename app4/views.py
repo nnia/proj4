@@ -17,6 +17,8 @@ import os
 #def index(request):
 #    return HttpResponse("Hello, world1. ")
 # Функции представления
+#-----------------------------------------------------
+# Базовое
 
 def indef(request):
     return HttpResponse("Hello World1!")
@@ -26,6 +28,7 @@ def index(request):
     return render(request, "index.html")
 
 #-----------------------------------------------------
+# Вспомогательные для неоднократного использования
 
 def hello(request):     
 	return HttpResponse("Hello world 4!")
@@ -45,7 +48,9 @@ def current_datetime(request):
 	return now1
 	#return render(request, {"header": header(request)})
 
+
 #-----------------------------------------------------
+# Отдельные страницы целиком
 # My pages with separate URLs
 
 def defaultf(request):
@@ -56,7 +61,7 @@ def coding(request):
 
 def testbase(request):
 	person = Person.objects.all()
-	questionSet = QuestionSet.object.all()
+	questionSet = QuestionSet.objects.all()
 	return render(request, "testbase.html", 
 		{"person": person, 
 		"questionSet" : questionSet})
@@ -67,7 +72,7 @@ def enfant(request):
 	BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 	print BASE_DIR #os.path.join(BASE_DIR, '../db.sqlite3')
-
+	print hello (request)
 	return render(request, "enfant.html")
 
 def answer(request):
@@ -79,7 +84,7 @@ def answer(request):
 	#person = Person.objects.all()
 	person = Person.objects.all()
 
-#	newp = Person(surname = 'Petrov', name = 'Petr', age = 3, result = 45)
+#	newp = Person(surname = 'Valentinova', name = 'Valentina', age = 4, result = 56)
 #	newp.save()
 	
 	#print(e.age for e in person)

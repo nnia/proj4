@@ -4,6 +4,7 @@
 
 {% block header %}
 	{% block title %}
+		<title> Личный сайт </title>
 		<h1>Анна Егорова</h1>
 	{% endblock %}
 	{% block menu %}
@@ -24,10 +25,31 @@
 
 {% block footer %}
 	{% block copyright %}
+
 		<div class = "footer">
  		Дата и время загрузки страницы: {% now "N j, Y, P" %} <br>
  		Сделала <a href="//vk.com/anna_egorova"></a>Анна Егорова
+ 
+				<div onmouseover="mOver(this)"
+			 	onmouseout="mOut(this)" align = "right"
+				style="height:10px; color:#696969">*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*0000000000000000000*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</div>
+
 		</div>
+
+
+		<script>
+		function mOver(obj)
+		{
+		obj.innerHTML="-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-ooooooooooooooooooo-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
+		}
+
+		function mOut(obj)
+		{
+		obj.innerHTML="*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*0000000000000000000*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+		}
+		</script>
+
+
 	{% endblock %}
 	 	<a title="Home page" href="index.html">Домой (на главную)</a>
 {% endblock %}

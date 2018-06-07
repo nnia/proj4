@@ -27,7 +27,7 @@ p {
   margin-left: 0px; /* Отступ слева в пикселах */
   margin-right: 0px; /* Отступ справа в пикселах */
   border-left: 1px solid #999; /* Параметры линии слева */
-  border-bottom: 1px solid #999; /* Параметры линии снизу */
+  /* border-bottom: 1px solid #999; */ /* Параметры линии снизу */ 
   padding-left: 10px; /* Отступ от линии слева до текста  */
   padding-bottom: 10px; /* Отступ от линии снизу до текста  */
 }
