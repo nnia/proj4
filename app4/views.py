@@ -56,7 +56,7 @@ def coding(request):
 
 def testbase(request):
 	person = Person.objects.all()
-	questionSet = QuestionSet.object.all()
+	questionSet = QuestionSet.objects.all()
 	return render(request, "testbase.html", 
 		{"person": person, 
 		"questionSet" : questionSet})
@@ -66,7 +66,7 @@ def enfant(request):
 	#print os.path.abspath(os.path.join(__file__,"../.."))
 	BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-	print BASE_DIR #os.path.join(BASE_DIR, '../db.sqlite3')
+#	print BASE_DIR #os.path.join(BASE_DIR, '../db.sqlite3')
 
 	return render(request, "enfant.html")
 
@@ -79,14 +79,14 @@ def answer(request):
 	#person = Person.objects.all()
 	person = Person.objects.all()
 
-#	newp = Person(surname = 'Petrov', name = 'Petr', age = 3, result = 45)
-#	newp.save()
+#	newp = Person(surname = 'Aliev', name = 'Ali', age = 5, result = 56) 
+#	newp.save()    # this.works
 	
 	#print(e.age for e in person)
 	p = Person.objects.values_list('id', 'surname')
 
 	#print(person.query.__str__())
-	print p
+#	print p
 
 	#print(Person.objects.filter(age='11').values)
 	#print(person.get(age="11"))
