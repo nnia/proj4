@@ -1,0 +1,17 @@
+
+Не забыть сделать сборку в release (выпуск)
+
+
+Qt 5.5.1
+Список библиотек, которые "попросил" exe-файл для запуска
+libgcc_s_dw2-1.dll
+libstdc++-6.dll
+libwinpthread-1.dll
+Qt5Core.dll
+Qt5Gui.dll
+Qt5Widgets.dll
+qwindows.dll
+
+
+Всплывающая подсказка ограничивается размером экрана  - проверить
+ui->label->setToolTip("Текст подсказки, можно кириллицу");

@@ -11,6 +11,22 @@
         <br>
 {% endfor %}
 
+
+{% for item in questionSet %}
+        {{item.id}}
+        {{item.question}}
+        {{item.nAnswers}}
+        {{item.answer1}}
+        {{item.answer2}}
+        {{item.answer3}}
+        {{item.rightAnswer}}
+        {{item.ageMin}}
+        {{item.ageMax}}
+        {{item.choice}}
+        <br>
+{% endfor %}
+
+
 <h1>{{person.title}}</h1>
 
 

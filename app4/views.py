@@ -66,6 +66,10 @@ def testbase(request):
 		{"person": person, 
 		"questionSet" : questionSet})
 
+def best_dprk(request):
+	return render(request, "best_dprk.html")
+
+
 def enfant(request):
 	#print os.path.dirname(__file__)
 	#print os.path.abspath(os.path.join(__file__,"../.."))
@@ -76,12 +80,6 @@ def enfant(request):
 	return render(request, "enfant.html")
 
 def answer(request):
-	print("-----answer-----")
-	#person = Person.objects.get(id=0)
-	#person = Person.objects.order_by('age')
-	
-	#Person.surname = "surname1"	
-	#person = Person.objects.all()
 	person = Person.objects.all()
 
 #	newp = Person(surname = 'Valentinova', name = 'Valentina', age = 4, result = 56)
@@ -103,15 +101,6 @@ def answer(request):
 		"person": person, 
 		"current_datetime": current_datetime(request),
 		"header": header(request)  })	
-	#return render(request, "answer.html")	
-
-	#template = loader.get_template('answer/answer.html')
-	#return HttpResponse(template.render(request))
-    
-
-
-
-
 
 def contact(request):
     errors = []

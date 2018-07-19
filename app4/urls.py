@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^coding.html$', views.coding, name='coding'),
     url(r'^contact.html$', views.contact, name='contact'),    
     url(r'^testbase.html$', views.testbase, name='testbase'),
+    url(r'^best_dprk.html$', views.best_dprk, name='best_dprk'),
     url(r'^enfant.html$', views.enfant, name='enfant'),    
     url(r'^answer.html$', views.answer, name='answer'),
     url(r'^defaultf.html$', views.defaultf, name='defaultf'),
